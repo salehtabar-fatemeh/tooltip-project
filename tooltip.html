@@ -18,6 +18,19 @@
       <script>
          let viewTooltip = document.querySelector("div");
          let btns = document.querySelectorAll("button");
+         for (let i = 0; i < btns.length; i++) {
+        btns[i].innerHTML = " Mouse enter for tooltip";
+
+        btns[i].addEventListener("mouseenter", function (e) {
+          viewTooltip.style.display = "block";
+          viewTooltip.style.left = e.clientX + "px";
+          viewTooltip.style.top = e.clientY + "px";
+        });
+
+        btns[i].addEventListener("mouseleave", function () {
+          viewTooltip.style.display = "none";
+        });
+      }
 
       </script>
     
