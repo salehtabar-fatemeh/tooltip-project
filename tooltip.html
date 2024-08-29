@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tooltip</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="general.css">
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-    <div class="show-tooltip text-bg-dark text-center">
-        Show tooltip in my project
+  </head>
+  <body>
+    <div class="container d-flex">
+      <div class="contain-tooltip text-bg-secondary border border-3 ">
+        contain tooltip
+        <button class="show-tooltip text-bg-dark">show-tooltip</button>
       </div>
-  
-      <button class="text-bg-secondary"></button>
-      <button class="text-bg-secondary"></button>
-      <script>
-         let viewTooltip = document.querySelector("div");
-         let btns = document.querySelectorAll("button");
-         for (let i = 0; i < btns.length; i++) {
-        btns[i].innerHTML = " Mouse enter for tooltip";
+      <div class="without-tooltip text-bg-secondary border border-3 ">
+        without tooltip
+      </div>
+      <div class="contain-tooltip text-bg-secondary border border-3">
+        contain tooltip
+        <button class="show-tooltip text-bg-dark">show-tooltip</button>
+      </div>
+      <div class="contain-tooltip text-bg-secondary border border-3">
+        contain tooltip
+        <button class="show-tooltip text-bg-dark">show-tooltip</button>
+      </div>
+    </div>
+ 
 
-        btns[i].addEventListener("mouseenter", function (e) {
-          viewTooltip.style.display = "block";
-          viewTooltip.style.left = e.clientX + "px";
-          viewTooltip.style.top = e.clientY + "px";
+    <script>
+      let containTooltips = document.querySelectorAll(".contain-tooltip");
+      let showTooltips = document.querySelectorAll(".show-tooltip");
+
+      for (let i = 0; i < containTooltips.length; i++) {
+        containTooltips[i].addEventListener("mouseenter", () => {
+          showTooltips[i].style.display = "block";
         });
-
-        btns[i].addEventListener("mouseleave", function () {
-          viewTooltip.style.display = "none";
+        containTooltips[i].addEventListener("mouseleave", () => {
+          showTooltips[i].style.display = "none";
         });
       }
-
-      </script>
-    
-</body>
+    </script>
+  </body>
 </html>

@@ -1,18 +1,22 @@
-button {
+.contain-tooltip,.without-tooltip{
     width: 170px;
     height: 60px;
     border-radius: 10px;
-    margin-top: 120px;
-    margin-left: 120px;
-    border: 3px solid rgb(19, 17, 17);
+    margin-left: 50px;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  div.show-tooltip {
-    width: 180px;
-    height: 80px;
+
+   button.show-tooltip {
+    width: 150px;
+    height: 50px;
     border: 3px solid bisque;
     border-radius: 10px;
-    position: fixed;
+    text-align: center;
+    position: absolute;
+    top: -100%;
     display: none;
-   margin-top: -100px;
   }
