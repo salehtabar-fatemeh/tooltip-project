@@ -9,25 +9,22 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    <div class="container d-flex">
-      <div class="contain-tooltip text-bg-secondary border border-3 ">
+      <button class="contain-tooltip text-bg-secondary border border-3 ">
         contain tooltip
-        <button class="show-tooltip text-bg-dark">show-tooltip</button>
-      </div>
-      <div class="without-tooltip text-bg-secondary border border-3 ">
+        <span class="show-tooltip text-bg-dark">show-tooltip</span>
+      </button>
+      <button class="without-tooltip text-bg-secondary border border-3 ">
         without tooltip
-      </div>
-      <div class="contain-tooltip text-bg-secondary border border-3">
+      </button>
+      <button class="contain-tooltip text-bg-secondary border border-3">
         contain tooltip
-        <button class="show-tooltip text-bg-dark">show-tooltip</button>
-      </div>
-      <div class="contain-tooltip text-bg-secondary border border-3">
+        <span class="show-tooltip text-bg-dark">show-tooltip</span>
+      </button>
+      <button class="contain-tooltip text-bg-secondary border border-3">
         contain tooltip
-        <button class="show-tooltip text-bg-dark">show-tooltip</button>
-      </div>
-    </div>
- 
-
+        <span class="show-tooltip text-bg-dark">show-tooltip</button>
+      </button>
+  
     <script>
       let containTooltips = document.querySelectorAll(".contain-tooltip");
       let showTooltips = document.querySelectorAll(".show-tooltip");
